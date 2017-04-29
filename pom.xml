@@ -90,6 +90,18 @@
 
     <dependency>
       <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-c3p0</artifactId>
+      <version>4.2.21.Final</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-commons-annotations</artifactId>
+      <version>4.0.2.Final</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
       <artifactId>hibernate-entitymanager</artifactId>
       <version>3.6.10.Final</version>
     </dependency>
