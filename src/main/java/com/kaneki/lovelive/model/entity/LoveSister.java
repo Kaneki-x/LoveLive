@@ -30,7 +30,10 @@ public class LoveSister {
     private int followers_count;
 
     @Column(name = "uid")
-    private int uid;
+    private long uid;
+
+    @Index(name = "since_set_id")
+    private long since_set_id;
 
     public int getId() {
         return id;
@@ -64,11 +67,19 @@ public class LoveSister {
         this.followers_count = followers_count;
     }
 
-    public int getUid() {
+    public long getUid() {
         return uid;
     }
 
-    public void setUid(int uid) {
+    public void setUid(long uid) {
         this.uid = uid;
+    }
+
+    public long getSince_set_id() {
+        return since_set_id;
+    }
+
+    public void setSince_set_id(long since_set_id) {
+        this.since_set_id = since_set_id;
     }
 }

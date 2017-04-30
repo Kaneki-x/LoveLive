@@ -30,6 +30,9 @@
         </mvc:message-converters>
     </mvc:annotation-driven>
 
+    <!-- 用于持有ApplicationContext,可以使用SpringContextHolder.getBean('xxxx')的静态方法得到spring bean对象 -->
+    <bean class="com.kaneki.lovelive.holder.SpringContextHolder" lazy-init="false" />
+
     <context:property-placeholder location="classpath:db.properties" />
 
     <bean class="com.mchange.v2.c3p0.ComboPooledDataSource" id="dataSource">
