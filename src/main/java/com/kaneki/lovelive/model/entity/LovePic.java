@@ -32,6 +32,9 @@ public class LovePic {
     @Column(name = "pic_origin")
     private String pic_origin;
 
+    @Column(name = "pic_local_path")
+    private String pic_local_path;
+
     public int getId() {
         return id;
     }
@@ -70,5 +73,13 @@ public class LovePic {
 
     public void setPic_origin(String pic_origin) {
         this.pic_origin = pic_origin;
+    }
+
+    public String getPic_local_path() {
+        return pic_local_path;
+    }
+
+    public void setPic_local_path(String pic_local_path) {
+        this.pic_local_path = pic_local_path;
     }
 }

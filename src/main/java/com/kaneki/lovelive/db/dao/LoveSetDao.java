@@ -15,8 +15,8 @@ import java.util.List;
 
 /**
  * @author yueqian
- * @Desctription 管理员dao
- * @date 2016-5-16
+ * @Desctription 图片组dao
+ * @date 2017-5-06
  * @email yueqian@mogujie.com
  */
 @Repository

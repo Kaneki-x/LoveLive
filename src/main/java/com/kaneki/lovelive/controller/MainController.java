@@ -33,7 +33,7 @@ public class MainController {
      */
     @RequestMapping(value = "/authorize")
     public ModelAndView loginPageIndex() {
-        return new ModelAndView("redirect:" + WeiboConfig.getValue("authorizeURL") + "?client_id=" + WeiboConfig.getValue("client_ID") + "&redirect_uri=" + WeiboConfig.getValue("redirect_URI"));
+        return new ModelAndView("redirect:" + WeiboConfig.getValue("authorize_url") + "?client_id=" + WeiboConfig.getValue("client_id") + "&redirect_uri=" + WeiboConfig.getValue("redirect_url"));
     }
 
     /**
@@ -42,8 +42,8 @@ public class MainController {
     public void loginPageIndex(HttpServletRequest request) {
         String code = request.getParameter("code");
         Oauth2Service oauth2Service = KRetrofit.getInstance().getRetrofit().create(Oauth2Service.class);
-        Call<AccessTokenRsp> call = oauth2Service.accessToken(WeiboConfig.getValue("client_ID"), WeiboConfig.getValue("client_SERCRET"),
-                "authorization_code", code, WeiboConfig.getValue("redirect_URI"));
+        Call<AccessTokenRsp> call = oauth2Service.accessToken(WeiboConfig.getValue("client_id"), WeiboConfig.getValue("client_secret"),
+                "authorization_code", code, WeiboConfig.getValue("redirect_url"));
         call.enqueue(new Callback<AccessTokenRsp>() {
             public void onResponse(Call<AccessTokenRsp> call, Response<AccessTokenRsp> response) {
                 AccessTokenRsp accessTokenRsp = response.body();

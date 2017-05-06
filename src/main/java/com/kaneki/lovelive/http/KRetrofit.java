@@ -28,7 +28,7 @@ public class KRetrofit {
 
     private KRetrofit() {
         retrofit = new Retrofit.Builder()
-                .baseUrl(WeiboConfig.getValue("baseURL"))//★这里最后面必须能带“/”
+                .baseUrl(WeiboConfig.getValue("base_api_url"))//★这里最后面必须能带“/”
                 .addConverterFactory(GsonConverterFactory.create())//设置将json解析为javabean所用的方式
                 .build();
     }

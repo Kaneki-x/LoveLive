@@ -36,7 +36,6 @@ public class LoveSet {
     @Transient
     private List<LovePic> lovePics;
 
-
     public int getId() {
         return id;
     }

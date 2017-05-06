@@ -13,7 +13,7 @@ import retrofit2.http.Path;
  */
 public interface Oauth2Service {
 
-    @GET("/Oauth2/access_token")
+    @GET("oauth2/access_token")
     Call<AccessTokenRsp> accessToken(@Path("client_id") String client_id, @Path("client_secret") String client_secret,
                                       @Path("grant_type") String grant_type, @Path("code") String code, @Path("redirect_uri") String redirect_uri);
 }
