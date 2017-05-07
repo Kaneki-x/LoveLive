@@ -1,4 +1,4 @@
-package com.kaneki.lovelive.service.api;
+package com.kaneki.lovelive.http.api;
 
 import com.kaneki.lovelive.model.response.UserRsp;
 import retrofit2.Call;

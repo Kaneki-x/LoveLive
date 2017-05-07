@@ -4,7 +4,7 @@ import com.kaneki.lovelive.cache.CacheCenter;
 import com.kaneki.lovelive.config.WeiboConfig;
 import com.kaneki.lovelive.http.KRetrofit;
 import com.kaneki.lovelive.model.response.AccessTokenRsp;
-import com.kaneki.lovelive.service.api.Oauth2Service;
+import com.kaneki.lovelive.http.api.Oauth2Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -14,9 +14,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import javax.persistence.Access;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author yueqian

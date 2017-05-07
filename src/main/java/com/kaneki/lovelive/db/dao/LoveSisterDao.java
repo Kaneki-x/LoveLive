@@ -20,7 +20,7 @@ import java.util.List;
  * @email yueqian@mogujie.com
  */
 @Repository
-public class LoveSisterDao extends BaseDao<LoveSet> {
+public class LoveSisterDao extends BaseDao<LoveSister> {
 
     public LoveSister findSisterById(final int sid) {
         return hibernateTemplate.execute(new HibernateCallback<LoveSister>() {

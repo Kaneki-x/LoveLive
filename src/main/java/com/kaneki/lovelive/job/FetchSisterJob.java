@@ -3,7 +3,7 @@ package com.kaneki.lovelive.job;
 import com.kaneki.lovelive.cache.CacheCenter;
 import com.kaneki.lovelive.http.KRetrofit;
 import com.kaneki.lovelive.model.response.UserRsp;
-import com.kaneki.lovelive.service.api.UserService;
+import com.kaneki.lovelive.http.api.UserService;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.scheduling.quartz.QuartzJobBean;
