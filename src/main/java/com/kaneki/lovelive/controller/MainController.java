@@ -4,7 +4,7 @@ import com.kaneki.lovelive.cache.CacheCenter;
 import com.kaneki.lovelive.config.WeiboConfig;
 import com.kaneki.lovelive.http.KRetrofit;
 import com.kaneki.lovelive.model.response.AccessTokenRsp;
-import com.kaneki.lovelive.http.api.Oauth2Service;
+import com.kaneki.lovelive.http.api.Oauth2Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -39,8 +39,8 @@ public class MainController {
     @RequestMapping(value = "/default")
     public void loginPageIndex(HttpServletRequest request) {
         String code = request.getParameter("code");
-        Oauth2Service oauth2Service = KRetrofit.getInstance().getRetrofit().create(Oauth2Service.class);
-        Call<AccessTokenRsp> call = oauth2Service.accessToken(WeiboConfig.getValue("client_id"), WeiboConfig.getValue("client_secret"),
+        Oauth2Api oauth2Api = KRetrofit.getInstance().getRetrofit().create(Oauth2Api.class);
+        Call<AccessTokenRsp> call = oauth2Api.accessToken(WeiboConfig.getValue("client_id"), WeiboConfig.getValue("client_secret"),
                 "authorization_code", code, WeiboConfig.getValue("redirect_url"));
         call.enqueue(new Callback<AccessTokenRsp>() {
             public void onResponse(Call<AccessTokenRsp> call, Response<AccessTokenRsp> response) {

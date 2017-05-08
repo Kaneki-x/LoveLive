@@ -11,7 +11,7 @@ import retrofit2.http.Path;
  * @date 2017/5/6
  * @email yueqian@mogujie.com
  */
-public interface UserService {
+public interface UserApi {
 
     @GET("2/users/show.json")
     Call<UserRsp> show(@Path("access_token") String access_token, @Path("uid") long uid);

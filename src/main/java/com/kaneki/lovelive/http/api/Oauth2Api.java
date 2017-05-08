@@ -11,7 +11,7 @@ import retrofit2.http.Path;
  * @date 2017/4/28
  * @email yueqian@mogujie.com
  */
-public interface Oauth2Service {
+public interface Oauth2Api {
 
     @GET("oauth2/access_token")
     Call<AccessTokenRsp> accessToken(@Path("client_id") String client_id, @Path("client_secret") String client_secret,
